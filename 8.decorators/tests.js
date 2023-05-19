@@ -70,10 +70,10 @@ describe("Домашнее задание к занятию 8 «Функции �
     it("Декоратор считает общее количество вызовов функции", () => {
       const functionToDecorate = () => console.log("тук тук");
       const decoratedFunction = debounceDecoratorNew(functionToDecorate, 100);
+
       expect(decoratedFunction.allCount).toBe(0);
       decoratedFunction(1, 2, 3);
       expect(decoratedFunction.allCount).toBe(1);
-
       decoratedFunction(1, 2, 3);
       expect(decoratedFunction.allCount).toBe(2);
     });
